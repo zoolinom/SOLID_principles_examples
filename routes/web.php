@@ -1,5 +1,10 @@
 <?php
 
+use App\Acme\SingleResponsibility\Reporting\HtmlOutput;
+use App\Acme\SingleResponsibility\Reporting\Repositories\SalesRepository;
+use App\Acme\SingleResponsibility\Reporting\SalesReporter;
+use Carbon\Carbon;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +17,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $report = new SalesReporter(new SalesRepository);
+
+    $begin = Carbon::now()->subDays(10);
+    $end = Carbon::now();
+
+    return $report->between($begin, $end, new HtmlOutput);
+
 });
