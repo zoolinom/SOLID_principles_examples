@@ -3,7 +3,7 @@
 - [x] Single Responsibility
 - [x] Open-Closed
 - [x] Liskov Substitution
-- [ ] Interface Segregation
+- [x] Interface Segregation
 - [ ] Depandency Inversion
 
 ## Single responsibility
@@ -22,3 +22,6 @@ Quick list of ways to adhere to LSP:
 1. Preconditions can't be greater
 1. Post conditions at least equal to
 1. Exception types must mach
+
+## Interface Segregation
+A client should not be forced to implement an interface that it doesn't use
