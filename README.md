@@ -4,7 +4,7 @@
 - [x] Open-Closed
 - [x] Liskov Substitution
 - [x] Interface Segregation
-- [ ] Depandency Inversion
+- [x] Depandency Inversion
 
 ## Single responsibility
 A class should have one, and only one reason to change
@@ -25,3 +25,11 @@ Quick list of ways to adhere to LSP:
 
 ## Interface Segregation
 A client should not be forced to implement an interface that it doesn't use
+
+## Dependency Inversion
+Depend on abstractions, not on concretions
+* Dependency Inversion does not equal to Dependency Injection
+* High level modules should not depend upon low level module, they shoud depends upon abstractions, low level module too should depend upon abstraction
+    * High level code isn't as concerned with details
+    * Low level code is more concerned with details and specific
+* All of this is about decoupling code
